@@ -394,6 +394,26 @@
  */
 
 /**
+ * CHANGEDETAIL
+ */
+
+- (void)changeDetail:(CDVInvokedUrlCommand*)command
+{
+    NSString* detail = [command.arguments objectAtIndex:0];
+
+	if (!self.progressIndicator) {
+		CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+		[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+		return;
+	}
+
+    self.progressIndicator.detailsLabelText = detail;
+
+    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+/**
  * HIDE
  */
 

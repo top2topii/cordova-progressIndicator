@@ -21,6 +21,10 @@ npm install cordova-plugin-progressindicator
 The Docs are situated at [http://pbernasconi.github.io/cordova-progressIndicator/](http://pbernasconi.github.io/cordova-progressIndicator/)
 
 
+## My Hack
+ - function add
+ - changeDetail(detailString) : change detail string while show Loding screen for Label-Detail
+
 ## Screenshots
 
 iOS
